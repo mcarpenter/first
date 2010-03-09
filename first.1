@@ -7,6 +7,7 @@
 .TH first 1 "09 Mar 2010" "SunOS 5.11" "User Commands"
 .SH NAME
 first \- an adaptation of \fBlast\fR to display login and logout information about users and terminals
+
 .SH SYNOPSIS
 .LP
 .nf
@@ -17,16 +18,29 @@ first \- an adaptation of \fBlast\fR to display login and logout information abo
 .SH DESCRIPTION
 .sp
 .LP
+\fBfirst\fR is identical to \fBlast\fR apart from the following changes:
+.sp
+.in +4
+Expanded username column from 8 to 16 characters.
+.sp
+Full length timestamps for both logon and logoff, including year.
+.sp
+Option to display timestamps as seconds from 1970 (UNIX epoch time) for easier processing.
+.in -4
+.sp
+These changes are intended to make \fBlast\fR more convenient for processing long (old) \fBwtmpx\fR files.
+.sp
+.LP
 The \fBfirst\fR command looks in the \fB/var/adm/wtmpx\fR file, which records all logins and logouts, for information about a user, a terminal, or any group of users and terminals. Arguments specify names of users or terminals of interest. If multiple arguments are given, the information applicable to any of the arguments is printed. For example, \fBfirst\fR \fBroot\fR \fBconsole\fR lists all of root's sessions, as well as all sessions on the console terminal. \fBfirst\fR displays the sessions of the specified users and terminals, most recent first, indicating the times at which the session began, the duration of the session, and the terminal on which the session took place. \fBfirst\fR also indicates whether the session is continuing or was cut short by a reboot.
 .sp
 .LP
 The pseudo-user reboot logs in when the system is shutdown and when it reboots. Thus, 
 .sp
-.in +2
+.in +4
 .nf
 first reboot
 .fi
-.in -2
+.in -4
 .sp
 
 .sp
@@ -90,6 +104,7 @@ Displays times as seconds from beginning of 1970 (UNIX epoch time).
 .sp
 .LP
 Date and time format is based on locale specified by the \fBLC_ALL\fR, \fBLC_TIME\fR, or \fBLANG\fR environments, in that order of priority.
+
 .SH FILES
 .sp
 .ne 2
@@ -116,7 +131,7 @@ lw(2.75i) |lw(2.75i)
 .
 ATTRIBUTE TYPEATTRIBUTE VALUE
 _
-AvailabilitySUNWesu
+Availabilityhttp://github.com/mcarpenter/first
 .TE
 
 .SH AUTHOR
