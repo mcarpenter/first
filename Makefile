@@ -16,7 +16,7 @@ first: last.c Makefile
 	$(CC) $(LIBFLAGS) -o first last.c
 
 README: first.1
-	$(TBL) first.1 | $(NEQN) /usr/share/lib/pub/eqnchar - | $(NROFF) -u0 -Tlp -man - | $(COL) -x > README
+	$(TBL) first.1 | $(NEQN) /usr/share/lib/pub/eqnchar - | $(NROFF) -u0 -Tlp -man - | $(COL) -b -x > README
 
 .PHONY: clean
 clean:

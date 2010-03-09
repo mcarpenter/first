@@ -10,8 +10,8 @@ NAME
      information about users and terminals
 
 SYNOPSIS
-     first [-a] [-n _n_u_m_b_e_r | -number] [-f _f_i_l_e_n_a_m_e] [-u]
-          [_n_a_m_e | _t_t_y]...
+     first [-a] [-n number | -number] [-f filename] [-u]
+          [name | tty]...
 
 
 DESCRIPTION
@@ -75,15 +75,15 @@ User Commands                                            first(1)
                               column.
 
 
-     -f _f_i_l_e_n_a_m_e              Uses _f_i_l_e_n_a_m_e as the  name  of  the
+     -f filename              Uses filename as the  name  of  the
                               accounting    file    instead    of
                               /var/adm/wtmpx.
 
 
-     -n _n_u_m_b_e_r|-_n_u_m_b_e_r        Limits  the   number   of   entries
+     -n number|-number        Limits  the   number   of   entries
                               displayed   to  that  specified  by
-                              _n_u_m_b_e_r. These options  are  identi-
-                              cal; the -_n_u_m_b_e_r option is provided
+                              number. These options  are  identi-
+                              cal; the -number option is provided
                               as a transition tool  only  and  is
                               removed in future releases.
 
@@ -110,9 +110,9 @@ ATTRIBUTES
 
      ____________________________________________________________
     |       ATTRIBUTE TYPE        |       ATTRIBUTE VALUE       |
-    |______________________________|______________________________|
+    |_____________________________|_____________________________|
     | Availability                | SUNWesu                     |
-    |______________________________|______________________________|
+    |_____________________________|_____________________________|
 
 
 AUTHOR
