@@ -22,7 +22,7 @@
 /*
  * first
  *
- * Martin Carpenter, mcarpenter@free.com.
+ * Martin Carpenter, mcarpenter@free.fr.
  *
  * Modifications to OpenSolaris' last(1) to output fully-formatted
  * logon/logoff dates in either human (includes year) or machine
