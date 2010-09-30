@@ -26,6 +26,8 @@ DESCRIPTION
          Option to display timestamps as seconds from 1970  (UNIX
          epoch time) for easier processing.
 
+         Large file support.
+
      These changes are intended to make first more convenient for
      processing long (old) wtmpx files.
 
@@ -55,8 +57,6 @@ DESCRIPTION
 
      gives an approximate record of  when  the  operating  system
      instance was shutdown and when it rebooted. This can be used
-     to calculate the availability of the operating  system  over
-     time.
 
 
 
@@ -69,6 +69,10 @@ SunOS 5.11          Last change: 09 Mar 2010                    1
 
 User Commands                                            first(1)
 
+
+
+     to calculate the availability of the operating  system  over
+     time.
 
 
      first with no arguments displays a record of all logins  and
@@ -118,10 +122,6 @@ FILES
 ATTRIBUTES
      See attributes(5) for descriptions of the  following  attri-
      butes:
-
-
-
-
 
 
 

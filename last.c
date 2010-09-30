@@ -254,7 +254,7 @@ next_word:
         }
     }
 
-    wtmp = open(wtmpfile, 0);
+    wtmp = open(wtmpfile, O_RDONLY | O_LARGEFILE);
     if (wtmp < 0) {
         perror(wtmpfile);
         exit(1);
