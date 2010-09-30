@@ -26,7 +26,7 @@ DESCRIPTION
          Option to display timestamps as seconds from 1970  (UNIX
          epoch time) for easier processing.
 
-     These changes are intended to make last more convenient  for
+     These changes are intended to make first more convenient for
      processing long (old) wtmpx files.
 
 

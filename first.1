@@ -28,7 +28,7 @@ Full length timestamps for both logon and logoff, including year.
 Option to display timestamps as seconds from 1970 (UNIX epoch time) for easier processing.
 .in -4
 .sp
-These changes are intended to make \fBlast\fR more convenient for processing long (old) \fBwtmpx\fR files.
+These changes are intended to make \fBfirst\fR more convenient for processing long (old) \fBwtmpx\fR files.
 .sp
 .LP
 The \fBfirst\fR command looks in the \fB/var/adm/wtmpx\fR file, which records all logins and logouts, for information about a user, a terminal, or any group of users and terminals. Arguments specify names of users or terminals of interest. If multiple arguments are given, the information applicable to any of the arguments is printed. For example, \fBfirst\fR \fBroot\fR \fBconsole\fR lists all of root's sessions, as well as all sessions on the console terminal. \fBfirst\fR displays the sessions of the specified users and terminals, most recent first, indicating the times at which the session began, the duration of the session, and the terminal on which the session took place. \fBfirst\fR also indicates whether the session is continuing or was cut short by a reboot.
