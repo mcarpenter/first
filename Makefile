@@ -13,17 +13,17 @@ LDFLAGS=-lintl
 .PHONY: all
 all: first README
 
-first: last.c Makefile
-	$(CC) $(LDFLAGS) -o first last.c
+first: first.c Makefile
+	$(CC) $(LDFLAGS) -o first first.c
 
 README: first.1
 	$(TBL) first.1 | $(NEQN) $(EQNCHAR) - | $(NROFF) -u0 -Tlp -man - | $(COL) -b -x > README
 
 .PHONY: clean
 clean:
-	$(RM) -f core first README last.o Makefile.bak
+	$(RM) -f core first README first.o Makefile.bak
 
 .PHONY: depend
 depend:
-	$(MAKEDEPEND) last.c
+	$(MAKEDEPEND) first.c
 
