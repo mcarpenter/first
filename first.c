@@ -75,6 +75,7 @@
 #include <utmpx.h>
 #include <locale.h>
 #include <ctype.h>
+#include <libintl.h>
 
 /*
  * NMAX, LMAX and HMAX are set to these values for now. They
