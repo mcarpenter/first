@@ -436,8 +436,12 @@ next_word:
             print = 0;    /* reset the print flag */
         }
     }
-    ct = ctime(&buf[0].ut_xtime);
-    (void) printf(gettext("\nwtmp begins %10.10s %5.5s \n"), ct, ct + 11);
+    if(uflag) {
+        (void) printf(gettext("\nwtmp begins %lu \n"), buf[0].ut_xtime);
+    } else {
+        ct = ctime(&buf[0].ut_xtime);
+        (void) printf(gettext("\nwtmp begins %24.24s \n"), ct);
+    }
 
     /* free() called to prevent lint warning about names */
     free(names);
