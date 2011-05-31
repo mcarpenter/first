@@ -1,22 +1,23 @@
 
 CC=gcc
 COL=/usr/bin/col
+EQNCHAR=/usr/share/lib/pub/eqnchar
 MAKEDEPEND=/usr/openwin/bin/makedepend
 NEQN=/usr/bin/neqn
 NROFF=/usr/bin/nroff
 RM=/usr/bin/rm
 TBL=/usr/bin/tbl
 
-LIBFLAGS=-L/usr/local/lib -lintl
+LDFLAGS=-lintl
 
 .PHONY: all
 all: first README
 
 first: last.c Makefile
-	$(CC) $(LIBFLAGS) -o first last.c
+	$(CC) $(LDFLAGS) -o first last.c
 
 README: first.1
-	$(TBL) first.1 | $(NEQN) /usr/share/lib/pub/eqnchar - | $(NROFF) -u0 -Tlp -man - | $(COL) -b -x > README
+	$(TBL) first.1 | $(NEQN) $(EQNCHAR) - | $(NROFF) -u0 -Tlp -man - | $(COL) -b -x > README
 
 .PHONY: clean
 clean:
